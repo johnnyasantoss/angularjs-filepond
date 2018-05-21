@@ -19,11 +19,13 @@
             server: {
                 url: 'http://localhost:9000/api/files/'
             },
+            instantUpload: false,
             allowMultiple: true,
+            allowRevert: true,
             required: true,
             maxFiles: 5,
             dropOnPage: true,
-            dropOnElement: false
+            dropOnElement: false,
         };
 
         vm.changeAllowMultiple = function () {
