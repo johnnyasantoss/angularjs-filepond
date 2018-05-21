@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A handy FilePond adapter component for AngularJS",
   "main": "dist/filepond.module.js",
-  "repository": "w8",
+  "repository": "https://github.com/johnnyasantoss/angularjs-filepond",
   "author": "Johnny Santos <johnnyadsantos@gmail.com>",
   "license": "MIT",
   "browserify-shim": {
