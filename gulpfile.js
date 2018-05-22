@@ -5,24 +5,73 @@ const gulp = require("gulp");
 const del = require('del');
 const browserSync = require('browser-sync');
 const path = require('path');
+const rename = require("gulp-rename");
+const gulpif = require('gulp-if');
 
-gulp.task('clean', () => del(["./dist/**"]));
+/**
+ * @param {boolean} isMinified
+ * @param {Function} cb
+ * @returns {NodeJS.ReadWriteStream}
+ */
+function buildJs(isMinified, cb) {
+    var transformers = [
+        ["babelify", { presets: ["env"] }],
+        ["browserify-shim", { global: true }],
+    ];
 
-gulp.task('build', () => {
+    if (isMinified) {
+        transformers.push(
+            [
+                'uglifyify'
+                , {
+                    mangle: true,
+                    global: true,
+                    compress: {
+                        sequences: true,
+                        dead_code: true,
+                        booleans: true,
+                        conditionals: true,
+                        if_return: false,
+                        drop_console: true,
+                        keep_fnames: true
+                    },
+                    output: {
+                        comments: false
+                    }
+                }
+            ]);
+    }
+
     return gulp.src('./src/modules/filepond.module.js')
         .pipe(bro({
-            debug: true,
-            transform: [
-                ["babelify", { presets: ["env"] }],
-                ["browserify-shim", { global: true }],
-                // ['uglifyify', {global: true}]
-            ]
+            error: 'emit',
+            transform: transformers
         }))
+        .pipe(gulpif(isMinified, rename(path => {
+            if (path.basename.indexOf('.js') > 0) {
+                path.basename = path.basename.replace('.js', '.min.js')
+            } else if (path.extname === '.js') {
+                path.extname = '.min' + path.extname
+            }
+        })))
         .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(sourcemaps.mapSources((sourcePath) => path.join('../src', sourcePath)))
         .pipe(sourcemaps.write("."))
         .pipe(gulp.dest('dist'))
-        .on('end', () => browserSync.reload())
+        .on('end', () => cb());
+}
+
+gulp.task('clean', () => del(["./dist/**"]));
+
+gulp.task('publish', ['clean'], (done) => {
+    buildJs(false, () => {
+        buildJs(true, () => done());
+    });
+    return undefined;
+});
+
+gulp.task('build', () => {
+    return buildJs(false, () => browserSync.reload())
 });
 
 gulp.task('debug', ["clean", "build"], () => {
