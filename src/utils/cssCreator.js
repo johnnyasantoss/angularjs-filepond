@@ -1,4 +1,8 @@
 module.exports = function () {
+    if (!document) {
+        return;
+    }
+
     let found = false;
     document.head.childNodes.forEach(node => {
         if (node instanceof HTMLStyleElement && node.id === 'filepond-style') {
