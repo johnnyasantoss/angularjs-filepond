@@ -1068,8 +1068,8 @@ browserify@^15.1.0:
     xtend "^4.0.0"
 
 browserify@^16.2.2:
-  version "16.2.2"
-  resolved "https://registry.yarnpkg.com/browserify/-/browserify-16.2.2.tgz#4b1f66ba0e54fa39dbc5aa4be9629142143d91b0"
+  version "16.3.0"
+  resolved "https://registry.yarnpkg.com/browserify/-/browserify-16.3.0.tgz#4d414466e0b07492fff493a009ea883a9f2db230"
   dependencies:
     JSONStream "^1.0.3"
     assert "^1.4.0"
