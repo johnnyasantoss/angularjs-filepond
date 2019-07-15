@@ -63,18 +63,18 @@ function buildJs(isMinified, cb) {
 
 gulp.task('clean', () => del(["./dist/**"]));
 
-gulp.task('publish', ['clean'], (done) => {
+gulp.task('publish', gulp.series(['clean'], (done) => {
     buildJs(false, () => {
         buildJs(true, () => done());
     });
     return undefined;
-});
+}));
 
 gulp.task('build', () => {
     return buildJs(false, () => browserSync.reload())
 });
 
-gulp.task('debug', ["clean", "build"], () => {
+gulp.task('debug', gulp.series(["clean", "build"], () => {
     browserSync.init({
         server: {
             baseDir: "./"
@@ -83,9 +83,14 @@ gulp.task('debug', ["clean", "build"], () => {
 
     require('./tests/tempFileServer').start();
 
-    gulp.watch('./src/components/*.js', ['build']);
-    gulp.watch('./src/modules/*.js', ['build']);
-    gulp.watch('./src/utils/*.js', ['build']);
-    gulp.watch('./tests/page/*.js', ['build']);
-    gulp.watch('./index.html', ['build']);
-});
+    gulp.watch(
+        [
+            './src/components/*.js',
+            './src/modules/*.js',
+            './src/utils/*.js',
+            './tests/page/*.js',
+            './index.html'
+        ],
+        gulp.series('build')
+    );
+}));

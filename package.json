@@ -6,6 +6,10 @@
   "repository": "https://github.com/johnnyasantoss/angularjs-filepond",
   "author": "Johnny Santos <johnnyadsantos@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "publish": "gulp publish",
+    "dev": "gulp debug"
+  },
   "browserify-shim": {
     "jquery": "global:$",
     "angular": "global:angular",
