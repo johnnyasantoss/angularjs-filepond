@@ -1,6 +1,6 @@
 {
   "name": "angularjs-filepond",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A handy FilePond adapter component for AngularJS",
   "main": "dist/filepond.module.js",
   "repository": "https://github.com/johnnyasantoss/angularjs-filepond",
