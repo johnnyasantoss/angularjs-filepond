@@ -1,0 +1,11 @@
+language: node_js
+
+node_js:
+  - "node"
+  - "lts"
+
+script: yarn run publish
+
+cache:
+  npm: false
+  yarn: false
