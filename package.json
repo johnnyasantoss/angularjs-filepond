@@ -7,6 +7,7 @@
   "author": "Johnny Santos <johnnyadsantos@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "prepublish": "gulp publish",
     "publish": "gulp publish",
     "dev": "gulp debug"
   },
