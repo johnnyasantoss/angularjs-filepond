@@ -16,7 +16,7 @@
     "filepond": "global:FilePond"
   },
   "dependencies": {
-    "filepond": "^1.5.2"
+    "filepond": "^4.4.11"
   },
   "peerDependencies": {
     "angular": "~1.7.8"
