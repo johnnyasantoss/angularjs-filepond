@@ -3,6 +3,7 @@
 [![npm](https://img.shields.io/npm/dt/angularjs-filepond.svg)][npmpackage]
 [![npm bundle size (minified)](https://img.shields.io/bundlephobia/minzip/angularjs-filepond.svg)][npmpackage]
 [![npm](https://img.shields.io/npm/l/angularjs-filepond.svg)][npmpackage]
+[![Build Status](https://travis-ci.com/johnnyasantoss/angularjs-filepond.svg?branch=master)](https://travis-ci.com/johnnyasantoss/angularjs-filepond)
 
 A AngujarJS (yes I know that he is a bit old, but still people using it) component for [FilePond][filepond].
 
