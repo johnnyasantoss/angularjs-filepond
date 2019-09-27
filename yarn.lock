@@ -2199,8 +2199,8 @@ fastq@^1.6.0:
     reusify "^1.0.0"
 
 filepond@^4.4.11:
-  version "4.7.1"
-  resolved "https://registry.yarnpkg.com/filepond/-/filepond-4.7.1.tgz#b4c1fbc184ba314a52d1f85d0020cefa10f0d8e5"
+  version "4.7.2"
+  resolved "https://registry.yarnpkg.com/filepond/-/filepond-4.7.2.tgz#5b61d4b437c0e0f9cad7afcb9ffc6e9d16c0ceec"
 
 fill-range@^4.0.0:
   version "4.0.0"
