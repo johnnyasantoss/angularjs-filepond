@@ -35,7 +35,7 @@
     "del": "^5.0.0",
     "express": "^4.16.3",
     "gulp": "^4.0.2",
-    "gulp-bro": "^1.0.3",
+    "gulp-bro": "^2.0.0",
     "gulp-if": "^3.0.0",
     "gulp-rename": "^1.2.3",
     "gulp-sourcemaps": "^2.6.4",
