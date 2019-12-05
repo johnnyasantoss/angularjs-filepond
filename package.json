@@ -37,7 +37,7 @@
     "gulp": "^4.0.2",
     "gulp-bro": "^2.0.0",
     "gulp-if": "^3.0.0",
-    "gulp-rename": "^1.4.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "multer": "^1.4.2",
     "request": "^2.88.0",
