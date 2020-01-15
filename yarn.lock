@@ -2445,9 +2445,9 @@ fastq@^1.6.0:
     reusify "^1.0.0"
 
 filepond@^4.7.4:
-  version "4.9.3"
-  resolved "https://registry.yarnpkg.com/filepond/-/filepond-4.9.3.tgz#f5fb0c70043bd2185e493cf9a726c6675629f654"
-  integrity sha512-sHv8b/GdiCxo6R+0poXULtHu/T8VH1zmIN/mrI+4Dg/ECFnhr/23YnxlphKFU8WFwz09ix48MRw8Stdjnju/BQ==
+  version "4.9.4"
+  resolved "https://registry.yarnpkg.com/filepond/-/filepond-4.9.4.tgz#84889fa42fe2f920ab3664380ccf64d9690ddbea"
+  integrity sha512-dt0y3hqeNhkukgp7/iTRWOOVA5RvNvSLZlr/u3I9i+6c870A+2jtwP0o0Frqsv0jbDQrivEgQ6r5wIJlrl91oA==
 
 fill-range@^4.0.0:
   version "4.0.0"
