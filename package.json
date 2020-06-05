@@ -20,10 +20,10 @@
     "filepond": "^4.7.4"
   },
   "peerDependencies": {
-    "angular": "~1.7.9"
+    "angular": "~1.8.0"
   },
   "devDependencies": {
-    "angular": "~1.7.9",
+    "angular": "~1.8.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babelify": "^8.0.0",
