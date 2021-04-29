@@ -1,0 +1,17 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "06:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: filepond
+    versions:
+    - 4.25.1
+    - 4.25.2
+    - 4.25.3
+    - 4.26.0
+    - 4.26.1
+    - 4.26.2
