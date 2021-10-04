@@ -1,0 +1,3 @@
+# everything except built files
+**
+!dist/**
