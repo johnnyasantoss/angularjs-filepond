@@ -4,7 +4,7 @@ node_js:
   - "node"
   - "lts/*"
 
-script: yarn run publish
+script: yarn run prepublish
 
 cache:
   npm: false
