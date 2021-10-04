@@ -17,18 +17,18 @@
     "filepond": "global:FilePond"
   },
   "dependencies": {
-    "filepond": "^4.7.4"
+    "filepond": "^4"
   },
   "peerDependencies": {
-    "angular": "~1.8.0"
+    "angular": "^1"
   },
   "devDependencies": {
-    "angular": "~1.8.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babelify": "^8.0.0",
+    "angular": "^1",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babelify": "^10.0.0",
     "body-parser": "^1.19.0",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.5",
     "browserify": "^17.0.0",
     "browserify-shim": "^3.8.14",
     "cors": "^2.8.5",
@@ -38,8 +38,8 @@
     "gulp-bro": "^2.0.0",
     "gulp-if": "^3.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "multer": "^1.4.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "multer": "^1.4.3",
     "request": "^2.88.0",
     "uglifyify": "^5.0.2"
   }

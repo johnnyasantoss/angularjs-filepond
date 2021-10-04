@@ -15,7 +15,7 @@ const gulpif = require('gulp-if');
  */
 function buildJs(isMinified, cb) {
     var transformers = [
-        ["babelify", { presets: ["env"] }],
+        ["babelify", { presets: ["@babel/preset-env"] }],
         ["browserify-shim", { global: true }],
     ];
 

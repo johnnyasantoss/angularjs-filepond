@@ -64,3 +64,7 @@ typings/
 dist/
 
 # End of https://www.gitignore.io/api/node
+
+# Ignore locks so that dependabot it always use latest version
+yarn.lock
+package-lock.json
